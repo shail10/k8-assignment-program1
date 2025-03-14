@@ -13,12 +13,12 @@ spec:
         app: container1
     spec:
       containers:
-      - name: container1
-        image: us-central1-docker.pkg.dev/kubernetes-assignment-453322/k8s-assignment/container1:latest
-        volumeMounts:
-        - mountPath: /yash_PV_dir
-          name: standard-volume
+        - name: container1
+          image: us-central1-docker.pkg.dev/liquid-fort-453318-q8/program1-artifact/container1:latest
+          volumeMounts:
+            - mountPath: /shail_PV_dir
+              name: standard-volume
       volumes:
-      - name: standard-volume
-        persistentVolumeClaim:
-          claimName: standard-rwo-pvc
+        - name: standard-volume
+          persistentVolumeClaim:
+            claimName: standard-rwo-pvc
